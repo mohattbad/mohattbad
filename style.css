@@ -1,0 +1,222 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #159db0, #086bb7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  touch-action: none; /* Disable touch scrolling */
+}
+
+.game-container {
+  position: relative;
+  width: 800px;
+  border-radius: 35px;
+  height: 600px;
+  background: linear-gradient(45deg, black, #a700bf);
+  border: 2px solid #b100bd7a;
+  overflow: hidden;
+}
+
+#level-screen {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#bonus-screen {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  color: #ff69b4;
+  font-size: 24px;
+}
+
+#bonus-screen.visible {
+  display: block;
+}
+
+#stick-girl {
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  background-color: #000;
+  top: 50px;
+  left: 50px;
+  transition: top 0.1s, left 0.1s;
+}
+
+#stick-girl::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 5px;
+}
+
+#stick-girl::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+#goal {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #a801ab;
+  border-radius: 50%;
+  top: 500px;
+  left: 700px;
+}
+
+/* Virtual Joystick */
+#joystick-container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(41 35 226 / 45%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  touch-action: none;
+}
+
+#joystick {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0 0 0);
+  border-radius: 50%;
+  touch-action: none;
+}
+/* Video Container */
+#video-container {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 80%;
+max-width: 600px;
+background-color: rgba(0, 0, 0, 0.8);
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+z-index: 1000;
+display: none;
+}
+
+#video-container.visible {
+display: block;
+}
+
+#celebration-video {
+width: 100%;
+height: auto;
+border-radius: 10px;
+}
+h1 {
+
+position: absolute;
+
+transform: translate(-2px, -358px);
+
+z-index: 1000;
+
+font-family: cursive;
+
+color: #710473;
+
+/* backdrop-filter: blur(1px); */
+
+filter: drop-shadow(0px 7px 3px pink);
+}
+p {
+  font-size: 25px;
+  font-family: monospace;
+  color: cornsilk;
+}
+h2 {
+
+position: absolute;
+
+transform: translate(0px, -114px);
+
+font-size: 37px;
+
+color: blanchedalmond;
+
+background: linear-gradient(45deg, #7203ff, #00abf7);
+
+z-index: 1000;
+
+font-family: cursive;
+
+border-radius: 30px;
+}
+/* Character Image */
+#character {
+  position: absolute;
+  width: 80px; /* Adjust size as needed */
+  height: 80px;
+  transition: top 0.1s, left 0.1s;
+}
+
+/* Popup for Questions */
+#question-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff00e5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+
+#question-popup.visible {
+  display: block;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+#answer-options {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 23px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.answer-button {
+  padding: 12px 17px;
+  background-color: #0e000c;
+  color: #ffffff;
+  font-family: cursive;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.answer-button:hover {
+  background-color: #434283;
+}
+h3 {
+  font-family: cursive;
+  font-size: 20px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stick Girl Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>مغامرات مينوشة 💕</h1>
+  <div class="game-container">
+    <div id="level-screen">
+      <p id="level-text">Level 1: yalah bday</p>
+    </div>
+    <div id="bonus-screen" class="hidden">
+      <h2>Happy Birthday my own Mew Mew cat😍😍💕💕💕💕😍😍😍😍</h2>
+    </div>
+   <!-- Replace stick girl with a PNG image -->
+   <img id="character" src="character.gif" alt="Character">
+   <div id="goal"></div>
+    <!-- Virtual Joystick -->
+    <div id="joystick-container">
+      <div id="joystick"></div>
+    </div>
+  </div>
+  <!-- Popup for Questions -->
+   <!-- Popup for Questions -->
+   <div id="question-popup" class="hidden">
+    <div class="popup-content">
+      <h3 id="question-text"></h3>
+      <div id="answer-options">
+        <button class="answer-button" data-answer="1"></button>
+        <button class="answer-button" data-answer="2"></button>
+        <button class="answer-button" data-answer="3"></button>
+      </div>
+    </div>
+  </div>
+  <!-- Video Container -->
+  <div id="video-container" class="hidden">
+    <video id="celebration-video" controls>
+      <source src="oa.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <!-- Audio Element for Success Sound -->
+  <audio id="success-sound" src="wewe.wav"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
